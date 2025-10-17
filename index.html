@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Startup Landing Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1e293b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #fff;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background-color: #1e293b;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #3b82f6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #2563eb;
+        }
+
+        /* Features Section Styles */
+        .features {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .features h3 {
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            width: 300px;
+            padding: 20px;
+            background-color: #1e293b;
+            border-radius: 5px;
+            text-align: left;
+        }
+
+        .feature img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .feature h4 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .feature p {
+            color: #cbd5e1;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #0f172a;
+            padding: 20px;
+            text-align: center;
+            color: #cbd5e1;
+        }
+
+        footer a {
+            color: #3b82f6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .features h3 {
+                font-size: 1.8em;
+            }
+
+            .feature-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Tech Startup</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Revolutionizing the Future of Technology</h2>
+        <p>Our innovative solutions are designed to transform your business and drive growth. Join us on this exciting journey!</p>
+        <a href="#" class="cta-button">Get Started Today</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h3>Key Features</h3>
+        <div class="feature-list">
+            <div class="feature">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY/j//z8DNQAy0FjwAwNAwIIhsGgAouCwYMCeAYh8AoGNEJgEAAQYQLgJgfgGiAcCYAM0AAJ4QJoHhmQACIMAAHqmQ1gEAAQYAEDEQC6K7+e+AAAAAElFTkSuQmCC" alt="Feature 1">
+                <h4>Innovative Solutions</h4>
+                <p>Cutting-edge technology to solve complex problems and create new opportunities.</p>
+            </div>
+            <div class="feature">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY/j//z8DNQAy0FjwAwNAwIIhsGgAouCwYMCeAYh8AoGNEJgEAAQYQLgJgfgGiAcCYAM0AAJ4QJoHhmQACIMAAHqmQ1gEAAQYAEDEQC6K7+e+AAAAAElFTkSuQmCC" alt="Feature 2">
+                <h4>User-Friendly Interface</h4>
+                <p>Intuitive design for seamless user experience and increased productivity.</p>
+            </div>
+            <div class="feature">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY/j//z8DNQAy0FjwAwNAwIIhsGgAouCwYMCeAYh8AoGNEJgEAAQYQLgJgfgGiAcCYAM0AAJ4QJoHhmQACIMAAHqmQ1gEAAQYAEDEQC6K7+e+AAAAAElFTkSuQmCC" alt="Feature 3">
+                <h4>Scalable Architecture</h4>
+                <p>Flexible infrastructure that grows with your business needs, ensuring long-term success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Tech Startup. All rights reserved.</p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+    </footer>
+</body>
+</html>
