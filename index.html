@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Startup Landing Page</title>
+    <title>Awesome Landing Page</title>
     <style>
-        /* General Styles */
         body {
-            font-family: sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #121212;
@@ -17,182 +17,284 @@
 
         /* Header Styles */
         header {
-            background-color: #1e293b;
+            background: linear-gradient(to right, #333, #222);
             padding: 20px;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
-            color: #fff;
+            font-size: 2.5em;
         }
 
         /* Hero Section Styles */
         .hero {
-            background-color: #1e293b;
-            padding: 80px 20px;
+            background: linear-gradient(to right, #222, #111);
+            padding: 50px;
             text-align: center;
         }
 
         .hero h2 {
-            font-size: 2.5em;
+            font-size: 2em;
             margin-bottom: 20px;
-            color: #fff;
         }
 
         .hero p {
             font-size: 1.2em;
-            color: #cbd5e1;
-            margin-bottom: 30px;
+            max-width: 800px;
+            margin: 0 auto 30px;
         }
 
-        .cta-button {
+        .btn {
             display: inline-block;
-            padding: 15px 30px;
-            background-color: #3b82f6;
-            color: #fff;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
             text-decoration: none;
             border-radius: 5px;
-            font-weight: bold;
             transition: background-color 0.3s ease;
         }
 
-        .cta-button:hover {
-            background-color: #2563eb;
+        .btn:hover {
+            background-color: #367C39;
         }
 
         /* Features Section Styles */
         .features {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .features h3 {
-            font-size: 2em;
-            margin-bottom: 40px;
-            color: #fff;
-        }
-
-        .feature-list {
+            background: linear-gradient(to right, #111, #000);
+            padding: 50px;
             display: flex;
-            justify-content: center;
-            gap: 30px;
+            justify-content: space-around;
             flex-wrap: wrap;
         }
 
-        .feature {
+        .feature-card {
             width: 300px;
+            background-color: #222;
             padding: 20px;
-            background-color: #1e293b;
-            border-radius: 5px;
-            text-align: left;
+            margin: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        .feature img {
-            width: 50px;
-            height: 50px;
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card img {
+            max-width: 100px;
             margin-bottom: 15px;
         }
 
-        .feature h4 {
-            font-size: 1.3em;
+        .feature-card h3 {
             margin-bottom: 10px;
-            color: #fff;
         }
 
-        .feature p {
-            color: #cbd5e1;
+        /* Testimonials Section Styles */
+        .testimonials {
+            background: linear-gradient(to right, #000, #111);
+            padding: 50px;
+            text-align: center;
+        }
+
+        .testimonial-card {
+            background-color: #222;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 8px;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card .author {
+            font-weight: bold;
+        }
+
+        /* Contact Section Styles */
+        .contact {
+            background: linear-gradient(to right, #111, #222);
+            padding: 50px;
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact label {
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #555;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .contact input:focus,
+        .contact textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        .contact button {
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact button:hover {
+            background-color: #367C39;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            text-align: left;
         }
 
         /* Footer Styles */
         footer {
-            background-color: #0f172a;
+            background-color: #333;
             padding: 20px;
             text-align: center;
-            color: #cbd5e1;
-        }
-
-        footer a {
-            color: #3b82f6;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
+            font-size: 0.9em;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero {
-                padding: 60px 20px;
-            }
-
-            .hero h2 {
-                font-size: 2em;
-            }
-
-            .hero p {
-                font-size: 1.1em;
-            }
-
-            .features h3 {
-                font-size: 1.8em;
-            }
-
-            .feature-list {
+            .features {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .feature {
-                width: 100%;
-                max-width: 400px;
+            .feature-card {
+                width: 80%;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Tech Startup</h1>
+        <h1>Awesome Landing Page</h1>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h2>Revolutionizing the Future of Technology</h2>
-        <p>Our innovative solutions are designed to transform your business and drive growth. Join us on this exciting journey!</p>
-        <a href="#" class="cta-button">Get Started Today</a>
+        <h2>Welcome to Our Amazing Product</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a href="#" class="btn">Learn More</a>
     </section>
 
     <!-- Features Section -->
     <section class="features">
-        <h3>Key Features</h3>
-        <div class="feature-list">
-            <div class="feature">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY/j//z8DNQAy0FjwAwNAwIIhsGgAouCwYMCeAYh8AoGNEJgEAAQYQLgJgfgGiAcCYAM0AAJ4QJoHhmQACIMAAHqmQ1gEAAQYAEDEQC6K7+e+AAAAAElFTkSuQmCC" alt="Feature 1">
-                <h4>Innovative Solutions</h4>
-                <p>Cutting-edge technology to solve complex problems and create new opportunities.</p>
-            </div>
-            <div class="feature">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY/j//z8DNQAy0FjwAwNAwIIhsGgAouCwYMCeAYh8AoGNEJgEAAQYQLgJgfgGiAcCYAM0AAJ4QJoHhmQACIMAAHqmQ1gEAAQYAEDEQC6K7+e+AAAAAElFTkSuQmCC" alt="Feature 2">
-                <h4>User-Friendly Interface</h4>
-                <p>Intuitive design for seamless user experience and increased productivity.</p>
-            </div>
-            <div class="feature">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY/j//z8DNQAy0FjwAwNAwIIhsGgAouCwYMCeAYh8AoGNEJgEAAQYQLgJgfgGiAcCYAM0AAJ4QJoHhmQACIMAAHqmQ1gEAAQYAEDEQC6K7+e+AAAAAElFTkSuQmCC" alt="Feature 3">
-                <h4>Scalable Architecture</h4>
-                <p>Flexible infrastructure that grows with your business needs, ensuring long-term success.</p>
-            </div>
+        <div class="feature-card">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABAAQMAAACQp+OdAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JQIQAwAAAUwAAAHHAAAASCcZYjYAAABsXkYAAAAXdR4OUwAAAARnQU1BAACxjwv8YBQUAAAAgY0hSTQAAeiYIREADAAAAYSQAAAHYAAABpAAAA8AAGA2j+eAAAACVBMVEUAwAD///92upyRAAAAJ0lEQVR42mJggAJIGyAIIGIAAYgAAZiABmgAAGYAAKZAAEAAHXEAQdF4hOAAAAAAElFTkSuQmCC"
+                alt="Feature 1">
+            <h3>Feature 1</h3>
+            <p>Description of feature 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
+        <div class="feature-card">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABAAQMAAACQp+OdAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JQIQAwAAAUwAAAHHAAAASCcZYjYAAABsXkYAAAAXdR4OUwAAAARnQU1BAACxjwv8YBQUAAAAgY0hSTQAAeiYIREADAAAAYSQAAAHYAAABpAAAA8AAGA2j+eAAAACVBMVEUAwAD///92upyRAAAAJ0lEQVR42mJggAJIGyAIIGIAAYgAAZiABmgAAGYAAKZAAEAAHXEAQdF4hOAAAAAAElFTkSuQmCC"
+                alt="Feature 2">
+            <h3>Feature 2</h3>
+            <p>Description of feature 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="feature-card">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABAAQMAAACQp+OdAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JQIQAwAAAUwAAAHHAAAASCcZYjYAAABsXkYAAAAXdR4OUwAAAARnQU1BAACxjwv8YBQUAAAAgY0hSTQAAeiYIREADAAAAYSQAAAHYAAABpAAAA8AAGA2j+eAAAACVBMVEUAwAD///92upyRAAAAJ0lEQVR42mJggAJIGyAIIGIAAYgAAZiABmgAAGYAAKZAAEAAHXEAQdF4hOAAAAAAElFTkSuQmCC"
+                alt="Feature 3">
+            <h3>Feature 3</h3>
+            <p>Description of feature 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-card">
+            <p>"This product is amazing! It has completely transformed my workflow."</p>
+            <p class="author">- John Doe</p>
+        </div>
+        <div class="testimonial-card">
+            <p>"I highly recommend this product to anyone looking to improve their productivity."</p>
+            <p class="author">- Jane Smith</p>
+        </div>
+        <div class="testimonial-card">
+            <p>"The customer support is top-notch. They are always there to help with any questions."</p>
+            <p class="author">- Peter Jones</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div id="emailError" class="error-message"></div>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Tech Startup. All rights reserved.</p>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Contact Us</a>
+        <p>&copy; 2025 Awesome Company</p>
     </footer>
+
+    <script>
+        // Email validation function
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            const emailInput = document.getElementById('email');
+            const emailErrorDiv = document.getElementById('emailError');
+
+            if (!validateEmail(emailInput.value)) {
+                emailErrorDiv.textContent = 'Please enter a valid email address.';
+                event.preventDefault(); // Prevent form submission
+            } else {
+                emailErrorDiv.textContent = ''; // Clear any previous error messages
+            }
+
+            // Optionally, handle form submission via AJAX here
+            // For this example, we'll just show an alert
+            if (validateEmail(emailInput.value)) {
+                alert('Form submitted successfully!'); // Replace with actual submission logic
+            }
+        });
+    </script>
 </body>
+
 </html>
